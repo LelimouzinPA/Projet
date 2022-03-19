@@ -1,0 +1,28 @@
+{
+    "menu": [{
+            "id": 1,
+            "title": "Espace Personnel",
+            "image": "../Projet/assets/img/Icon/icons8-homme-d'affaire-96.png"
+        },
+        {
+            "id": 2,
+            "title": "Culture",
+            "image": "../Projet/assets/img/Icon/icons8-art-moderne-96.png"
+        },
+        {
+            "id": 3,
+            "title": "Sport",
+            "image": "../Projet/assets/img/Icon/icons8-exercice-96.png"
+        },
+        {
+            "id": 4,
+            "title": "Loisir",
+            "image": "../Projet/assets/img/Icon/icons8-banc-de-parc-96.png"
+        },
+        {
+            "id": 5,
+            "title": "Calendrier",
+            "image": "../Projet/assets/img/Icon/icons8-calendrier-96.png"
+        }
+    ]
+}

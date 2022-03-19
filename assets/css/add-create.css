@@ -1,0 +1,451 @@
+/*Cadre principal  de la zone de selection par bouton radio entre le particulier et les association*/
+
+#circleRadioMenu {
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+
+#radioSelectContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.circleMenuRadio {
+    box-shadow: -3px -27px 42px rgba(0, 0, 0, 0.46);
+    background-color: #ffffff;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 22px 22px 0px 0px;
+    z-index: 100;
+}
+
+.radioSelect {
+    display: inline-flex;
+    /* background: #fff;*/
+    height: 63px;
+    width: 400px;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    padding: 20px 15px;
+    box-shadow: 4px 50px 77px rgba(0, 0, 0, 0.2);
+}
+#buttonParticular{
+    margin-top: 20px;
+}
+#buttonProfessional{
+margin-top: 20px;
+position:relative;
+top: -100px;
+
+}
+
+/*cadre des bouton sans selection  */
+
+.radioSelect .select {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    border: 2px solid lightgrey;
+    transition: all 0.3s ease;
+}
+
+
+/* creation de 2 blocs distinct agissant sur le select */
+
+.radioSelect .select .radioSelectDot {
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+}
+
+
+/*cadre des boutons avec selection  */
+
+.radioSelect .select .radioSelectDot::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background: #0069d9;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+
+
+/* disparition des 2 boutons radio de base */
+
+input[type="radio"] {
+    display: none;
+}
+
+
+/*  bascule de couleur zone bouton entre blanc et bleu */
+
+#radioSelect1:checked:checked~.select1,
+#radioSelect2:checked:checked~.select2 {
+    border-color: #0069d9;
+    background: #0069d9;
+    box-shadow: 108px -91px 96px 47px rgba(0, 0, 0, 0.29) inset;
+    -webkit-box-shadow: 108px -91px 96px 47px rgba(0, 0, 0, 0.29) inset;
+    -moz-box-shadow: 108px -91px 96px 47px rgba(0, 0, 0, 0.29) inset;
+}
+
+
+/* bascule de couleur point du bouton entre gris et blanc */
+
+#radioSelect1:checked:checked~.select1 .radioSelectDot,
+#radioSelect2:checked:checked~.select2 .radioSelectDot {
+    background: #fff;
+}
+
+
+/* reglage de l'effet de transition à la selection  */
+
+#radioSelect1:checked:checked~.select1 .radioSelectDot::before,
+#radioSelect2:checked:checked~.select2 .radioSelectDot::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/*zone de texte de la selection du bouton radio non selectionner */
+
+.radioSelect .select p {
+    font-size: 20px;
+    color: #808080;
+}
+
+
+/*zone de texte de la selection du bouton radio selectionner */
+
+#radioSelect1:checked:checked~.select1 p,
+#radioSelect2:checked:checked~.select2 p {
+    color: #fff;
+}
+
+
+/*zone principal du formulaire */
+
+#userCreationContainer {
+    width: 95%;
+    height: 325px;
+    /* border: 1px solid #CCC;*/
+    margin: 0% 2.5% 0% 2.5%;
+}
+
+.userCreation {
+    width: 100%;
+   height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-325px);
+    transition: transform 1s;
+    top: 180px;
+}
+
+.userCreation.show-front {
+    transform: translateZ(-325px) rotateY( 0deg);
+}
+
+.userCreation.show-bottom {
+    transform: translateZ(-325px) rotateX( 90deg);
+}
+
+.containerFormUserAdd {
+margin-top: -25px;
+}
+
+.subscribeInput {
+    height: 40px;
+    width: 76%;
+    /*  margin-bottom: 5px;
+    border: none;
+    color: floralwhite;
+    background: linear-gradient(rgb(255, 255, 255), #0e004e);
+    /* font-size: 1.5em;*/
+}
+
+#associationObjet{
+height: 135px;
+
+}
+
+.subscribeLabel {
+    width: 25%;
+    text-align: end;
+}
+
+::placeholder {
+    color: rgb(224, 224, 224);
+}
+
+.userCreationView {
+    border-radius: 200px 55px 200px 55px;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    /*border: 2px solid black;*/
+    font-size: 20px;
+    font-weight: bold;
+    color: floralwhite;
+    text-align: center;
+    top: -212px;
+}
+
+.userCreationParticular {
+    background: radial-gradient(#3c86f6, #873fa6);
+    ;
+}
+
+.userCreationProfessional {
+    background: radial-gradient(#873fa6, #3c86f6);
+}
+
+.userCreationParticular {
+    transform: rotateY( 0deg) translateZ(-325px);
+}
+
+.userCreationProfessional {
+    transform: rotateX(-90deg) translateZ(-325px);
+}
+
+label {
+    margin-right: 10px;
+}
+
+.userCreationProfessional {
+    font-size: 16px;
+}
+
+div.userCreationProfessional form div.containerFormUserAdd div div input.subscribeInput {
+    /* border-radius: 5px;
+    height: 40px;
+    width: 250px;
+    margin-top: 5px;*/
+}
+
+div.userCreationProfessional form div.containerFormUserAdd div div.subscribeLabel {
+    /* margin-left: 10px;
+    margin-top: 20px;
+    padding-right: 4px;*/
+}
+
+.textError {
+    font-size: 13px;
+    margin: 0px;
+    text-align: center;
+    margin-right: 20%;
+    padding-top: 6px;
+}
+
+#containerFormUser {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#containerFormAssociation {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+#containerFormAssociation div.divTextError {
+    width: 100%;
+}
+
+#containerFormAssociation div.subscribeLabel {
+    width: 100%;
+    text-align: center;
+}
+
+#containerFormAssociation div.divInputForm input.subscribeInput {
+    width: 77%;
+}
+
+#containerFormAssociation div.divInputForm {
+    width: 100%;
+}
+
+.containerAssociation {
+    width: 50%;
+}
+.textErrorAssociation{
+height: 30px;
+}
+.divInputForm {
+    width: 70%;
+}
+
+#containerAssociationPseudo,
+#containerAssociationSiren,
+#containerAssociationPassword,
+#containerAssociationName{
+position:relative;
+top: -105px;
+}
+
+.divTextError {
+    width: 100%;
+    height: 25px;
+    margin-left: 10%;
+    margin-right: 9%;
+    border-radius: 22px 22px 0px 0px;
+    color: floralwhite;
+}
+.containerAssociation .divTextError{
+margin-bottom: 20px;
+}
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+#professional{
+height: 650px;
+}
+#associationObjet{
+	overflow: auto;
+	overflow-x: hidden;
+    resize: none;
+}
+
+#associationObjet::-webkit-scrollbar-track{
+	background-color: #e2e2e2;
+}
+
+#associationObjet::-webkit-scrollbar{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#associationObjet::-webkit-scrollbar-thumb{
+	border-radius: 100px;
+	background-color: #545454;
+}
+/*div.userCreationProfessional form div.containerFormUserAdd div div.subscribeLabel label {
+    margin-top: 10px;
+}*/
+
+
+
+@media screen and (max-width: 900px) {
+#containerAssociationPseudo,
+#containerAssociationSiren,
+#containerAssociationPassword,
+#containerAssociationName {
+position:initial;
+
+}
+#associationObjet {
+height: 70px;
+}
+.radioSelect{
+display: block;
+height: 50px;
+width: 168px;
+margin-top: 100px;
+}
+.circleMenuRadio{
+margin: 150px auto;
+transform: translate(6%,0%);
+}
+.radioSelect{
+display: block;
+height: 50px;
+width: 168px;
+margin-top: 133px;
+margin-right: auto;
+margin-left: auto;
+box-shadow: none;
+}
+.radioSelect .select{
+ margin: 0px;
+}
+.userCreationView{
+border-radius: 120px 55px 120px 55px;
+}
+.userCreationView{
+font-size: 15px;
+}
+.subscribeLabel{
+text-align:center;
+}
+.divInputForm{
+width: 66%;
+}
+.divTextError{
+margin-left: 0%;
+}
+#buttonProfessional{
+margin-top: 20px;
+}
+.divInputForm .input{
+font-size: 10px;
+height: 30px;
+}
+#buttonParticular{
+margin-top: 20px;
+}
+.textError{
+font-size: 10px;
+padding-top: 0px;
+margin-right: 0%;
+}
+.userCreation{
+top: 400px;
+height: 0px;
+}
+.containerAssociation .divTextError{
+margin-bottom: 0px;
+}
+.containerAssociation{
+width: 100%;
+}
+#userCreationContainer{
+height: 325px;
+}
+.userCreation.show-bottom{
+transform: translateZ(-400px) rotateX( 90deg);
+}
+.userCreation.show-front{
+transform: translateZ(-400px) rotateY( 0deg);
+}
+.userCreationParticular{
+transform: rotateY( 0deg) translateZ(-400px);
+}
+.userCreationProfessional{
+transform: rotateX(-90deg) translateZ(-400px);
+}
+.userCreationView{
+height: 800px;
+top:-400px;
+}
+#particular{
+height: 400px;
+}
+.containerFormUserAdd {
+margin-top: 0px;
+}
+
+#professional{
+height: 800px;
+}
+}

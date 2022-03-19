@@ -1,0 +1,327 @@
+.optionSection {
+  text-align: center;
+}
+#containerOption {
+  width: 57%;
+  position: relative;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  border-radius: 22px;
+}
+#map {
+  height: 220px;
+  width: 90%;
+  border-radius: 22px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.button {
+  display: inline-flex;
+  height: 50px;
+  width: 150px;
+  background: rgb(115, 0, 128);
+  border-radius: 22px;
+  text-align: center;
+  padding-top: 5px;
+  color: white;
+}
+.button:hover + .effectClick:hover {
+  background: rgb(109, 44, 100);
+}
+.optionImg img {
+  height: 45px;
+}
+.optionText {
+  width: 65%;
+}
+#containerSetting {
+  width: 50%;
+  background: darkgray;
+  display: none;
+  height: 418px;
+  padding: 25px;
+  border-radius: 15px;
+  border: 4mm ridge rgb(38, 0, 42);
+}
+.effectClick {
+  background: green;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 347px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.divInputForm {
+  height: 50px;
+}
+.subscribeLabelPassWordConfirm {
+  margin-top: 25px;
+}
+.inputParameter {
+  background-color: rgb(48, 50, 69);
+  border-radius: 20px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 50%;
+}
+#viewPage .inputParameter {
+  font-size: 15px;
+  width: 90%;
+}
+#associationPassword {
+  margin-right: 66px;
+}
+#hide {
+  width: 100%;
+  background: rgb(48, 50, 69);
+  height: 1697px;
+  position: absolute;
+  z-index: 3000;
+  opacity: 0.7;
+  border-radius: 15px;
+}
+button {
+  margin: 3px;
+}
+/*  */
+#choice {
+  text-align: center;
+}
+#associationContainerCalendar,
+#associationContainerSocial,
+#associationContainerDescription,
+#associationContainerMap,
+#associationContainerLogo,
+#associationContainerActu {
+  background: cadetblue;
+  width: 100%;
+  height: 212px;
+  border-radius: 22px;
+  display: grid;
+}
+ .containerProfilAssociation{width: 49%;}
+
+#associationContainerActu {
+  height: 534px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.associationImage {
+  width: 360px;
+  height: 180px;
+  padding: 15px;
+}
+#associationImageLogo {
+  width: 180px;
+  height: 180px;
+  padding: 15px;
+}
+#associationImageActu {
+  width: 75%;
+  height: 500px;
+}
+#associationContainerLogo {
+  width: 100%;
+  margin-bottom: 25px;
+}
+#associationActu {
+  position: relative;
+  top: -205px;
+}
+#associationContainerMap {
+  height: 450px;
+}
+#associationActuContainer {
+  height: 400px;
+  width: 100%;
+}
+#viewPage {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+#containerAssociationLogo {
+  text-align: center;
+  width: 100%;
+  display: flex;
+}
+.containerView {
+  width: 48%;
+  padding: 10px;
+}
+
+#containerAssociationMap {
+  text-align: -webkit-center;
+}
+#containerAssociationActu {
+  width: 50%;
+}
+#associationSloganLogo,
+#associationName {
+  width: 85%;
+  height: 50px;
+  margin: 15px;
+}
+#associationTitleActu {
+  margin-top: 15px;
+  width: 100%;
+  height: 45px;
+}
+#associationName,
+#associationSloganLogo {
+  margin-bottom: 25px;
+}
+#associationLogoContainerForm {
+  width: 100%;
+  margin-top: 30px;
+}
+#associationMapContainerForm {
+  position: relative;
+  top: -184px;
+  z-index: 1000;
+  background: rgba(169, 169, 169, 0.687);
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 18px;
+  color: rgb(0, 0, 0);
+}
+#associationActuContainerForm {
+  width: 48%;
+  margin-right: 15px;
+}
+#associationDescriptionContainerForm {
+  padding-top: 22px;
+}
+.mapInput {
+  margin-top: 15px;
+}
+#btnAssociationLogo {
+  position: relative;
+  top: 28px;
+}
+#viewPage {
+  margin: 25px;
+}
+.mapText {
+  padding-bottom: 11px;
+}
+#btnAssociationActu {
+  position: relative;
+  top: 26px;
+}
+p {
+  width: 100%;
+  height: 20px;
+  margin: 0px;
+}
+#btnAssociationDescription {
+  margin-top: 12px;
+}
+#btnAssociationMap {
+  position: relative;
+  top: -198px;
+}
+#associationStoryActu {
+  margin-top: 20px;
+  height: 403px;
+  margin-top: 20px;
+}
+#associationDescriptionText {
+  height: 166px;
+}
+/**/
+#associationContainerSocial {
+  height: 324px;
+  margin-top: 20px;
+}
+#associationContainerCalendar {
+  height: 324px;
+  margin-top: 20px;
+}
+#associationLogo {
+  margin-right: 1%;
+}
+#associationDescription {
+  width: 100%;
+}
+#associationMap {
+  margin-left: 1%;
+}
+#associationSocial {
+  position: relative;
+  top: -200px;
+  margin-left: 1%;
+}
+#associationCalendar {
+  position: relative;
+  top: -200px;
+  margin-right: 1%;
+}
+.footerPageZone {
+  position: absolute;
+  top: 1926px;
+  z-index: 3001;
+}
+#associationImgCalendar {
+  display: block;
+  margin: 0px auto;
+}
+.divInputFormSocial {
+  height: 20px;
+}
+.containerViewLarge {
+  width: 100%;
+  padding: 10px;
+}
+#containerSetting{right: 50%;
+left: 22%;
+}
+@media screen and (max-width: 900px) {
+
+ .containerProfilAssociation{width: 100%;}
+.optionSection{margin-top: 148px;}
+#containerSetting{right: 33%;
+left: 17%;
+}
+.inputParameter{width: 100%;
+font-size: 12px;
+}
+#associationActuContainerForm,
+#containerAssociationActu{
+width: 100%;
+}
+#associationContainerActu{
+height: 1050px;
+}
+.footerPageZone{
+margin-top: 1600px;
+}
+}
+@media screen and (max-width: 455px) {
+
+#containerAssociationLogo{
+display: block;
+
+}
+#associationImageLogo{
+width: 150px;
+height: 150px;
+
+}
+
+#associationContainerLogo{
+height: 389px;
+}
+}
+
+
+
