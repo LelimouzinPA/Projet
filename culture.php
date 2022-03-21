@@ -37,7 +37,7 @@ include 'parts/header.php'           ;
                     <td><?= $info->name; ?></td>
                     <td><?= $info->heading; ?></td>
                     <td><?= $info->subHeading; ?></td>
-                    <td><a href="info.php?name=<?= $info->name; ?>" class="btn btn-warning">Informations</a></td>
+                    <td><a href="info.php?id=<?= $info->id; ?>" class="btn btn-warning">Informations</a></td>
                 </tr>
                 <?php } ?>
             </tbody>

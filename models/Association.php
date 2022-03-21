@@ -27,14 +27,14 @@ class Association extends Database
 
     public function getInformation(): array
     {
-        $query = 'SELECT `association`.`objet`,`association`.`email`,`association`.`addressofheadquarters`,`association`.`rna`
+        $query = 'SELECT `association`.`name`,`association`.`objet`,`association`.`email`,`association`.`addressofheadquarters`,`association`.`rna`
         ,`association`.`siren`,`contents`.`type`,`contents`.`heading`,`contents`.`subHeading`,`contents`.`slogan`,`contents`.
         `description`,`contents`.`titleStory`,`contents`.`story`,`contents`.`latitude`,`contents`.`longitude`,`contents`.
         `urlFacebook`,`contents`.`urlTwitter`,`contents`.`urlInstagram`
         FROM `association` INNER JOIN `contents`
-        WHERE `association`.`email` = `contents`.`associationMail` AND `association`.`name`= :name ';
+        WHERE `association`.`email` = `contents`.`associationMail` AND `association`.`id`= :id ';
         $queryStatement = $this->db->prepare($query);
-        $queryStatement->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $queryStatement->bindValue(':id', $this->id, PDO::PARAM_STR);
         $queryStatement->execute();
 
         return $queryStatement->fetchAll(PDO::FETCH_OBJ);
@@ -233,8 +233,6 @@ class Association extends Database
         $queryStatement->bindValue(':rna', $this->rna, PDO::PARAM_STR);
         $queryStatement->execute();
         $response = $queryStatement->fetch(PDO::FETCH_OBJ);
-        // number = 0 si il n'y a pas de patient identique
-        // number = 1 si il y a un patient identique
         $number = $response->number;
         if ($number) {
             return true;
@@ -250,8 +248,6 @@ class Association extends Database
         $queryStatement->bindValue(':siren', $this->siren, PDO::PARAM_STR);
         $queryStatement->execute();
         $response = $queryStatement->fetch(PDO::FETCH_OBJ);
-        // number = 0 si il n'y a pas de patient identique
-        // number = 1 si il y a un patient identique
         $number = $response->number;
         if ($number) {
             return true;
@@ -267,8 +263,6 @@ class Association extends Database
         $queryStatement->bindValue(':pseudo', $this->pseudo, PDO::PARAM_STR);
         $queryStatement->execute();
         $response = $queryStatement->fetch(PDO::FETCH_OBJ);
-        // number = 0 si il n'y a pas de patient identique
-        // number = 1 si il y a un patient identique
         $number = $response->number;
         if ($number) {
             return true;
@@ -327,8 +321,7 @@ class Association extends Database
         $queryStatement->execute();
         // $number = $queryStatement->fetch(PDO::FETCH_OBJ)->number;
         $response = $queryStatement->fetch(PDO::FETCH_OBJ);
-        // number = 0 si il n'y a pas de patient identique
-        // number = 1 si il y a un patient identique
+
         $number = $response->number;
         if ($number) {
             $check = true;
@@ -365,7 +358,15 @@ class Association extends Database
 
         return $queryStatement->execute();
     }
-
+    public function ajaxMapIdByName()
+    {
+        $query = ' SELECT `id` FROM '.$this->table.' WHERE `name`= :name';
+        $queryStatement = $this->db->prepare($query);
+        $queryStatement->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $queryStatement->execute();
+        return $queryStatement->fetch(PDO::FETCH_OBJ);
+        
+    }
     /***
      * SETTER
      */

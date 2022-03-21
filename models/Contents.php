@@ -29,16 +29,15 @@ class Contents extends Database
 
     public function getSportList(): array
     {
-        $query = 'SELECT `contents`.`type`,`contents`.`heading`,`contents`.`subHeading`,`association`.`name`'
+        $query = 'SELECT `contents`.`type`,`contents`.`heading`,`contents`.`subHeading`,`association`.`name`,`association`.`id`'
             .' FROM '.$this->table.',`association` WHERE `contents`.`associationMail` = `association`.`email` AND `contents`.`type`="sport" ';
         $queryStatement = $this->db->query($query);
-
         return $queryStatement->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function getLoisirsList(): array
     {
-        $query = 'SELECT `contents`.`type`,`contents`.`heading`,`contents`.`subHeading`,`association`.`name`'
+        $query = 'SELECT `contents`.`type`,`contents`.`heading`,`contents`.`subHeading`,`association`.`name`,`association`.`id`'
             .' FROM '.$this->table.',`association` WHERE `contents`.`associationMail` = `association`.`email` AND `contents`.`type`="loisirs" ';
         $queryStatement = $this->db->query($query);
 
@@ -47,10 +46,10 @@ class Contents extends Database
 
     public function getCultureList(): array
     {
-        $query = 'SELECT `contents`.`type`,`contents`.`heading`,`contents`.`subHeading`,`association`.`name`'
+        $query = 'SELECT `contents`.`type`,`contents`.`heading`,`contents`.`subHeading`,`association`.`name`,`association`.`id`'
             .' FROM '.$this->table.',`association` WHERE `contents`.`associationMail` = `association`.`email` AND `contents`.`type`="culture" ';
         $queryStatement = $this->db->query($query);
-
+        
         return $queryStatement->fetchAll(PDO::FETCH_OBJ);
     }
 

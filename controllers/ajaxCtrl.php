@@ -53,6 +53,7 @@ switch ($clef) {
     $association->ajaxEmailIfExist();
     echo $association->ajaxEmailIfExist();
     break;
+    
     case 'session':
 if (isset($_SESSION['user'])) {
     echo 'sessionStartUser';
@@ -80,6 +81,12 @@ if (isset($_SESSION['user'])) {
     $contents->setHeading(htmlspecialchars($_POST['categoryAll']));
     $contents->setSubHeading(htmlspecialchars($_POST['subCategory']));
     echo  json_encode($contents->ajaxHeadingAndSubHeading());
+   break;
+   case 'mapAssociation':
+    $association = new Association();
+    $association->setName(htmlspecialchars($_POST['mapAssociation']));
+    echo  json_encode($association->ajaxMapIdByName());
+    break;
    break;
   default:
     break;

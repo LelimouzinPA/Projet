@@ -10,9 +10,10 @@ if (!isset($_SESSION)) {
     $emailSession = $_SESSION['association']['email'];
     $pseudoSession = $_SESSION['association']['pseudo'];
 }
-$nameAssociation = htmlspecialchars($_GET['name']);
+var_dump($_GET);
+$idAssociation = htmlspecialchars($_GET['id']);
 $information = new Association();
-$information->setName(htmlspecialchars($nameAssociation));
+$information->setid(htmlspecialchars($idAssociation));
 $informationResult = $information->getInformation();
 foreach ($informationResult as $informationSearch) {
 }

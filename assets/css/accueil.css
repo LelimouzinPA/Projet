@@ -1,5 +1,147 @@
-#map{
-width: 100%;
-height: 300px;
+#map {
+    width: 66%;
+    height: 426px;
+    margin-left: 17%;
+    position: absolute;
+    top: 1000px;
+}
 
+#containerMap {
+    width: 100%;
+    height: 600px;
+    margin-top: 160px;
+}
+
+#cadreMap img {
+    width: 100%;
+    position: absolute;
+    top: 740px;
+    height: 959px;
+}
+
+#veil {
+    text-align: center;
+    z-index: 5000;
+    width: 66%;
+    height: 426px;
+    margin-left: 17%;
+    background-color: rgba(170, 170, 170, 0.66);
+    font-size: 45px;
+    position: absolute;
+    top: 1000px;
+}
+
+#veil p {
+    margin-top: 170px;
+    opacity: 1;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+}
+
+div p {
+    text-align: center;
+}
+
+.textMainPage {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 20px;
+}
+
+
+/*@media screen and (max-width: 1315px) {
+   
+    #map,
+    #veil {
+        top: 844px;
+    }
+    #cadreMap img {
+        top: 583px;
+    }
+}*/
+
+@media screen and (max-width: 1041px) {
+    #actuMainPage {
+        margin-top: 133px;
+    }
+    #map,
+    #veil {
+        top: 1122px;
+    }
+    #cadreMap img {
+        top: 862px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #map,
+    #veil {
+        top: 852px;
+    }
+    #cadreMap img {
+        top: 593px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #map,
+    #veil {
+        top: 944px;
+    }
+    #cadreMap img {
+        top: 683px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #map,
+    #veil {
+        top: 1019px;
+    }
+    #cadreMap img {
+        top: 760px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #map,
+    #veil {
+        top: 1136px;
+    }
+    #cadreMap img {
+        top: 876px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #map,
+    #veil {
+        top: 1311px;
+    }
+    #cadreMap img {
+        top: 1052px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #map,
+    #veil {
+        top: 1281px;
+    }
+    #cadreMap img {
+        top: 1021px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    #map,
+    #veil {
+        top: 1415px;
+    }
+    #cadreMap img {
+        top: 1156px;
+    }
 }

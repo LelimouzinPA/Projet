@@ -9,7 +9,7 @@ include 'parts/header.php'        ;
                 <img id="imgLogo" src="<?=$imgLogoSrc; ?>" alt="">
             </div>
             <div>
-                <h2><?=$nameAssociation; ?></h2>
+                <h2><?=$informationSearch->name; ?></h2>
             </div>
             <div>
                 <h3><?=$informationSearch->slogan; ?></h3>

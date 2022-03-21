@@ -1,6 +1,6 @@
 <?php
 
-   session_start();
+session_start();
 require 'models/Database.php';
 require 'models/User.php';
 require 'Utils/Str.php';
