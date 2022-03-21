@@ -8,11 +8,13 @@ require 'controllers/connect-Ctrl.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projet</title>
     <link rel="stylesheet" href="http://localhost:8888/ProjetProv3/Projet/assets/css/style.css">
-        <link rel="stylesheet" href="http://localhost:8888/ProjetProv3/Projet/assets/css/font.css">
-
+    <link rel="stylesheet" href="http://localhost:8888/ProjetProv3/Projet/assets/css/font.css">
     <?php
+// recupérer des informations sur l'uri de la page
 $server = $_SERVER['REQUEST_URI'];
+// Scinde la chaine de caractéres pour eviter les mauvaises interpretation aprés un GET qui rajoutera des élement non désirer
         $serverSplits = explode('?', $server);
+//Condition d'appel de fichier js pour les pages comprenant un accés a la map de leaflet et à la page d'accueil
 if ($serverSplits[0] == '/ProjetProv3/Projet/profil-association.php' || $serverSplits[0] == '/ProjetProv3/Projet/index.php' || $serverSplits[0] == '/ProjetProv3/Projet/info.php') {?>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -25,6 +27,7 @@ if ($serverSplits[0] == '/ProjetProv3/Projet/profil-association.php' || $serverS
             if ($_SERVER['REQUEST_URI'] == '/ProjetProv3/Projet/index.php') {?>
             <link rel="stylesheet" href="http://localhost:8888/ProjetProv3/Projet/assets/css/accueil.css"><?php
 }}
+//On va vérifier que le tableau des css existe. Si c'est le cas je le garde sinon je crée un tableau vide pour éviter les erreurs dans la boucle foreach
 $cssList = isset($cssList) ? $cssList : [];
 foreach ($cssList as $css) { ?>
     <link rel="stylesheet" href="<?= $css; ?>">
