@@ -144,24 +144,6 @@ include 'parts/header.php'              ;
                             <div class="divInputForm"> <input id="associationPseudo" class="input subscribeInput"
                                     type="text" name="associationPseudo" placeholder="ex: Toto" /></div>
                         </div>
-                        
-                    
-                       
-                        
-                        
-                       
-                        
-                        
-                       
-                      
-                       
-                        
-                        
-                      
-                        
-                        
-                       
-                        
                         <div  class="containerAssociation">
                             <div class="divTextError">
                                 <p id="associationPasswordConfirmError" class="textError textErrorAssociation"></p>

@@ -1,8 +1,8 @@
 <?php
 session_start();
-require 'models/Database.php'   ;
+require 'models/Database.php';
 require 'models/Contents.php';
-require 'class/Form.php'        ;
+require 'class/Form.php'     ;
 
 /* liste du css utile pour cette page appel fais dans le header*/
 $cssList = ['../Projet/assets/css/loisirs-sport-culture.css'];
